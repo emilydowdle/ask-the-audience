@@ -33,7 +33,7 @@ io.on('connection', function (socket) {
       votes[socket.id] = message;
       socket.emit('voteCount', countVotes(votes));
       console.log(countVotes(votes))
-      socket.emit('statusMessage', 'Your vote has been cast!'); //emits to one client
+      socket.emit('statusMessage', 'Your vote has been cast! You chose option ' + message + '.'); //emits to one client
       console.log('Your vote has been cast: ' + message)
     }
   });
