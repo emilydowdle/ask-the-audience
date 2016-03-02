@@ -15,6 +15,7 @@ socket.on('statusMessage', function (message) {
 var voteCount = document.getElementById('vote-count');
 
 socket.on('voteCount', function (message) {
+  console.log(localStorage["voteCount"])
   if (localStorage["voteCount"] != undefined) {
     totalVotes = JSON.parse(localStorage["voteCount"])
     for (var key in totalVotes){
